@@ -1,0 +1,16 @@
+class Demo {
+
+    final int MAX_VALUE = 99;
+
+    void myMethod() {
+        MAX_VALUE = 101;
+    }
+
+    public static void main(String args[]) {
+        Demo obj = new Demo();
+        obj.myMethod();
+    }
+}
+
+\\ the error is that we can't change the vale of "MAX_VALUE" because it is final ,we can solve the error in two ways, the frist way is to remove "final"
+\\ the other way to fix the error is to create a new local variable in the method "myMethod" with a differnet name and keep the variable "MAX_VALUe" final 

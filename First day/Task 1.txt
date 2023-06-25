@@ -1,0 +1,21 @@
+public class PrimitiveToNonPrimitive {
+    public static void main(String[] args) {
+
+        int primitiveInt = 3;
+        double primitiveDouble = 3.11;
+        char primitiveChar = 'A';
+        boolean primitiveBoolean = true;
+
+        Integer wrapperInt = Integer.valueOf(primitiveInt);
+        Double wrapperDouble = Double.valueOf(primitiveDouble);
+        Character wrapperChar = Character.valueOf(primitiveChar);
+        Boolean wrapperBoolean = Boolean.valueOf(primitiveBoolean);
+
+        System.out.println("Primitive to Wrapper Conversion:");
+        System.out.println("Primitive int: " + primitiveInt + " -> Wrapper Integer: " + wrapperInt);
+        System.out.println("Primitive double: " + primitiveDouble + " -> Wrapper Double: " + wrapperDouble);
+        System.out.println("Primitive char: " + primitiveChar + " -> Wrapper Character: " + wrapperChar);
+        System.out.println("Primitive boolean: " + primitiveBoolean + " -> Wrapper Boolean: " + wrapperBoolean);
+    }
+
+}

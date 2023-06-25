@@ -1,0 +1,25 @@
+package string.lang;
+
+import java.util.Scanner;
+
+public class Stringfunc {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a string: ");
+        String originalString = sc.nextLine();
+
+        System.out.print("Enter the character to remove: ");
+        char charToRemove = sc.next().charAt(0);
+
+        String modifiedString = removeCharacter(originalString, charToRemove);
+        System.out.println("Modified String: " + modifiedString);
+
+       
+    }
+
+    public static String removeCharacter(String str, char charToRemove) {
+        String modifiedString = str.replace(Character.toString(charToRemove), "");
+        return modifiedString;
+    }
+}
