@@ -1,0 +1,26 @@
+package string.lang;
+
+import java.util.Scanner;
+
+    public class Chocolate{
+        public  double price;
+
+        public double price(){
+            return price;
+        }
+
+        public static void main(String[] arqs) {
+            DarkChocolate dark = new DarkChocolate();
+            WhiteChocolate white = new WhiteChocolate();
+            MilkChocolate milk = new MilkChocolate();
+
+            System.out.println("The price of dark chocolate is " +dark.price());
+            System.out.println("The price of white chocolate is " + white.price());
+            System.out.println("The price of milk chocolate is " + milk.price());
+
+        }
+
+    }
+
+
+

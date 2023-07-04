@@ -1,0 +1,52 @@
+package string.lang;
+
+import java.util.Scanner;
+
+class Array{
+        public static void reverse(int[] arr) {
+            int i = 0;
+            int j = arr.length -1;
+
+            while (i < j) {
+                int start = arr[i];
+                arr[i] = arr[j];
+                arr[j] = start;
+                i++;
+                j--;
+            }
+
+
+            }
+            public static void main(String[] args) {
+
+                Scanner sc = new Scanner(System.in);
+
+                System.out.println("Please enter the size of the array");
+                int length = sc.nextInt();
+
+                int[] arr = new int [length];
+
+
+                System.out.println("Please enter the elements of the array");
+                for (int i = 0; i < length ; i++){
+                    arr[i] = sc.nextInt();
+                }
+                System.out.print("The array before ");
+                for (int i =0 ; i < length; i++){
+
+                    System.out.print(arr[i] + " ");
+                }
+                System.out.println();
+                reverse(arr);
+                System.out.print("The array after ");
+                for (int i = 0; i < length; i++){
+
+                    System.out.print(arr[i] + " ");
+                }
+
+
+
+
+
+        }
+}

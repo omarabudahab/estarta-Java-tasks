@@ -1,0 +1,11 @@
+package string.lang;
+
+public class DarkChocolate extends Chocolate {
+    public DarkChocolate() {
+        price = 3.5;
+    }
+
+    public double price() {
+        return price;
+    }
+}

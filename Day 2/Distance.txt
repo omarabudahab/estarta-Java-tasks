@@ -1,0 +1,50 @@
+
+public class Distance {
+
+        double feet;
+        double inches;
+    public Distance(double feet, double inches) {
+        this.feet = feet;
+        this.inches = inches;
+
+    }
+    public  Distance() {
+            feet = 12;
+            inches = 1;
+        }
+        public double addDistance(double feet,double inches){
+            feet = feet/12;
+            return feet + inches;
+        }
+        public double addDistance(){
+        feet = feet/12;
+        return feet + inches;
+    }
+        public static boolean isGreater(double distance1, double distance2){
+            if (distance1 > distance2){
+                System.out.println("distance 1 is greater than distance 2");
+                return true;
+            }
+               else {
+                   System.out.println("Distance 2 is greater than distance 1");
+                   return false;
+            }
+        }
+
+
+    public static void main(String[] args) {
+
+            Distance d = new Distance(11.0,1.0);
+            Distance d2 = new Distance(24.0,2.0);
+            Distance d3 = new Distance();
+
+
+            System.out.println(d2.addDistance());
+            isGreater(d.addDistance(), d2.addDistance());
+            System.out.println(d3.addDistance());
+            isGreater(d3.addDistance(),d.addDistance());
+
+
+
+    }
+}

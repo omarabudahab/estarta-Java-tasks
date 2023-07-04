@@ -1,0 +1,48 @@
+package string.lang;
+
+public class Invoice {
+        private String partNum;
+        private String partDesc;
+        private int quantity;
+        private double itemPrice;
+
+        public Invoice (String partNum, String partDesc,int quantity,double itemPrice){
+            this.partNum = partNum;
+            this.partDesc = partDesc;
+            setItemPrice(itemPrice);
+            setQuantity(quantity);
+        }
+
+
+    public double getInvoiceAmmount(){
+            return quantity*itemPrice;
+        }
+
+    public void setItemPrice(double itemPrice){
+            if (itemPrice<0.0){
+                this.itemPrice=0.0;
+            }
+            else{
+                this.itemPrice=itemPrice;
+            }
+    }
+
+    public void setQuantity(int quantity){
+            if (quantity < 0){
+                this.quantity = 0;
+            }
+            else {
+                this.quantity = quantity;
+            }
+    }
+
+
+    public static void main(String[] args) {
+
+        Invoice i = new Invoice("test021","test",5,-1);
+        System.out.println(i.getInvoiceAmmount());
+
+
+
+    }
+}

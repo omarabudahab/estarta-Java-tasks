@@ -1,0 +1,76 @@
+package string.lang;
+
+import java.util.Scanner;
+
+class Qalq{
+
+
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        double x;
+        double y;
+
+        System.out.println("Please select what you want to do");
+        System.out.print("+ or - or * or / or m to find the mod or r to find the square root");
+        char operator = sc.next().charAt(0);
+
+        switch (operator){
+            case '+':
+                System.out.println("Please enter the first number");
+                x = sc.nextDouble();
+                System.out.println("Please enter the second number");
+                y = sc.nextDouble();
+                System.out.println("The sum is " + x + y);
+                break;
+            case '-':
+                System.out.println("Please enter the first number");
+                x = sc.nextDouble();
+                System.out.println("Please enter the second number");
+                y = sc.nextDouble();
+                System.out.println(x - y);
+                break;
+
+            case '*':
+                System.out.println("Please enter the first number");
+                x = sc.nextDouble();
+                System.out.println("Please enter the second number");
+                y = sc.nextDouble();
+                System.out.println("The multiplication of " + x + "and " + y + " equals" + x*y);
+                break;
+
+            case '/':
+                System.out.println("Please enter the first number");
+                x = sc.nextDouble();
+                System.out.println("Please enter the second number");
+                y = sc.nextDouble();
+                System.out.println("The division of " + x + "and " + y + " equals" + x/y);
+                break;
+
+            case 'm':
+                System.out.println("Please enter a number");
+                x = sc.nextDouble();
+                double result = x *2;
+
+                if (x >= 0)
+                System.out.println("The mod of the number " + x + " is " + x);
+
+                else{
+                    System.out.println("The mod of the number " +x+ "is " + (x-result));
+                }
+
+                break;
+
+            case 'r':
+                System.out.println("Please enter a number");
+                x = sc.nextDouble();
+                System.out.println("The square root of " + x +" equals " + Math.sqrt(x));
+
+            default:
+                System.out.println("Please enter a valid operator");
+        }
+
+    }
+
+}

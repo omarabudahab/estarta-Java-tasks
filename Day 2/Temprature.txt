@@ -1,0 +1,38 @@
+package string.lang;
+
+import java.util.Scanner;
+
+class Heater{
+
+    int temp;
+
+    public  Heater(){
+        this.temp = 15;
+    }
+
+    public void increase(){
+        temp = temp + 5;
+    }
+    public void decrease(){
+        temp = temp -5 ;
+    }
+
+
+    public static void main(String[] args) {
+
+        Heater h = new Heater();
+        System.out.println(h.temp);
+        h.increase(); //increase 5
+        h.decrease();  //decrease 5
+        h.decrease();  //decrease 5
+        System.out.println(h.temp); // the output should be 10
+
+
+
+
+
+
+
+    }
+
+}
