@@ -1,0 +1,20 @@
+
+    public enum Drinks {
+        COFFEE,
+        LATTE,
+        SPANISH_LATTE,
+        TEA;
+
+
+
+    public static void main(String[] args) {
+
+        Drinks drink = Drinks.SPANISH_LATTE;
+        System.out.println("Today I want to drink " + drink);
+
+        System.out.println("The drinks in the menu are:");
+        for (Drinks d : Drinks.values()) {
+            System.out.println(d);
+        }
+    }
+}

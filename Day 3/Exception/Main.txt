@@ -1,0 +1,15 @@
+public class Main {
+    public static void main(String[] args) {
+        try {
+            validateInput("invalid");
+        } catch (InvalidInputException exe) {
+            System.out.println("Caught InvalidInputException: " + exe.getMessage());
+        }
+    }
+
+    public static void validateInput(String input) {
+        if (input.equals("invalid")) {
+            throw new InvalidInputException("Invalid input provided.");
+        }
+    }
+}
