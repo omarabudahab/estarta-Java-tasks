@@ -1,0 +1,28 @@
+public class Test {
+    public static void main(String[] args) {
+        Book[] books = new Book[5];
+        books[0] = new Book(1, "Book 1");
+        books[1] = new Book(2, "Book 2");
+        books[2] = new Book(3, "Book 3");
+        books[3] = new Book(4, "Book 4");
+        books[4] = new Book(5, "Book 5");
+
+        int Id = 4;
+
+        try {
+            findById(books, Id);
+            System.out.println("Found");
+        } catch (BookNotFoundException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    public static Book findById(Book[] books, int id) throws BookNotFoundException {
+        for (Book b : books) {
+            if (b.getId() == id) {
+                return b;
+            }
+        }
+        throw new BookNotFoundException("Book with the given ID is not found");
+    }
+}
